@@ -1,0 +1,14 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Nguyễn Trọng Sang
+	email = 33416398+ErogeMaster225@users.noreply.github.com
+[init]
+	defaultBranch = main
+[credential "helperselector"]
+	selected = manager-core
+[credential]
+	helper = manager
