@@ -8,6 +8,7 @@ if ($null -eq $env:SCOOP) {
 	# Import scoop application list
 	scoop import $PSScriptRoot\scoop.json
 }
-# Set mpv portable config folder
-[System.Environment]::SetEnvironmentVariable('MPV_HOME', "$PSScriptRoot\mpv", 'User')
-
+if (-Not (Test-Path -Path "$HOME\WinDotfiles")) {
+	git clone https://github.com/ErogeMaster225/WinDotfiles $HOME\WinDotfiles
+}
+& $HOME\WinDotfiles\setup.ps1
