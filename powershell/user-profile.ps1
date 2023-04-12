@@ -1,7 +1,8 @@
 # set PowerShell to UTF-8
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
-# Prompt
-oh-my-posh init pwsh --config "$HOME\WinDotfiles\erogemaster225.omp.json" | Invoke-Expression
+# Prompt theme
+oh-my-posh init pwsh --config "$HOME\WinDotfiles\powershell\erogemaster225.omp.json" | Invoke-Expression
+# Fnm
 fnm env --use-on-cd | Out-String | Invoke-Expression
 # PSReadLine
 # Fzf
