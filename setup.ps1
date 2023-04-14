@@ -1,5 +1,7 @@
 # Import scoop application list
-scoop import $PSScriptRoot\scoop.json
+& $PSScriptRoot\scoop.ps1
+scoop import $PSScriptRoot\program_list.json
+Remove-Item $PSScriptRoot\program_list.json
 # Set mpv portable config folder
 [System.Environment]::SetEnvironmentVariable('MPV_HOME', "$PSScriptRoot\mpv", 'User')
 if (-Not (Test-Path -Path "$HOME\.gitconfig")) {
