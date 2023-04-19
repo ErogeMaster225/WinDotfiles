@@ -12,3 +12,4 @@ Install-Module Terminal-Icons -Scope CurrentUser
 if (-Not (Test-Path -Path "$PROFILE")) {
 	New-Item -Path $PROFILE -ItemType SymbolicLink -Value $PSScriptRoot\powershell\main.ps1
 }
+New-Item -Path $HOME\.config\scoop -ItemType SymbolicLink -Value $PSScriptRoot\scoop
