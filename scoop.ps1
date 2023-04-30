@@ -1,7 +1,7 @@
 [reflection.assembly]::loadwithpartialname("System.Windows.Forms") | Out-Null
 [reflection.assembly]::loadwithpartialname("System.Drawing") | Out-Null
 # Load the JSON file
-$json = Get-Content -Raw -Path "scoop.json" | ConvertFrom-Json
+$json = Get-Content -Raw -Path "$PSScriptRoot\scoop.json" | ConvertFrom-Json
 
 # Create the GUI form
 $form = New-Object System.Windows.Forms.Form

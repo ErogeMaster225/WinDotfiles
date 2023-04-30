@@ -1,5 +1,5 @@
 # Install Scoop package manager
-if ($null -eq $env:SCOOP) {
+if ($null -eq (Get-Command "scoop" -ErrorAction SilentlyContinue)) {
 	Invoke-RestMethod get.scoop.sh | Invoke-Expression
 	scoop bucket add .SM 'https://github.com/okibcn/ScoopMaster'
 	if ($null -eq (Get-Command "git.exe" -ErrorAction SilentlyContinue)) {
