@@ -2,3 +2,4 @@ mpv/playlists/**
 mpv/ytdl/download/**
 mpv/watch_later/**
 mpv/*.log
+nvim

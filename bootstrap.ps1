@@ -8,5 +8,6 @@ if ($null -eq (Get-Command "scoop" -ErrorAction SilentlyContinue)) {
 }
 if (-Not (Test-Path -Path "$HOME\WinDotfiles")) {
 	git clone https://github.com/ErogeMaster225/WinDotfiles $HOME\WinDotfiles
+    git clone https://github.com/ErogeMaster225/Nilvim $HOME\WinDotfiles\nvim
 }
 & $HOME\WinDotfiles\setup.ps1

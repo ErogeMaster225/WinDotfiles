@@ -1,417 +1,592 @@
 {
     "apps": [
         {
+            "Updated": "2023-02-26T11:21:25.1298697+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "7zip",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "22.01",
-            "Updated": "2023-02-26T11:21:25.1298697+07:00"
+            "Version": "22.01"
         },
         {
+            "Updated": "2023-04-06T08:34:52.0833352+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "7zip-zstd",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "v22.01-v1.5.5-R2",
-            "Updated": "2023-04-06T08:34:52.0833352+07:00"
+            "Version": "v22.01-v1.5.5-R2"
         },
         {
-            "Name": "aimp",
-            "Info": "",
+            "Updated": "2023-04-08T13:40:18.3912454+07:00",
             "Source": "extras",
-            "Version": "5.11.2429",
-            "Updated": "2023-04-08T13:40:18.3912454+07:00"
+            "Info": "",
+            "Name": "aimp",
+            "Version": "5.11.2429"
         },
         {
+            "Updated": "2023-04-24T00:35:34.8236408+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "alacritty-portable",
+            "Version": "0.12.0"
+        },
+        {
+            "Updated": "2023-02-26T11:21:25.1455062+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "aria2",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "1.36.0-1",
-            "Updated": "2023-02-26T11:21:25.1455062+07:00"
+            "Version": "1.36.0-1"
         },
         {
+            "Updated": "2023-04-29T08:29:42.2570967+07:00",
+            "Source": ".SM",
+            "Info": "Held package",
             "Name": "audacity-portable",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "3.2.5",
-            "Updated": "2023-03-05T15:20:14.8437815+07:00"
+            "Version": "3.3.0"
         },
         {
+            "Updated": "2023-04-13T15:01:12.9957817+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "bat",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "0.23.0",
-            "Updated": "2023-04-13T15:01:12.9957817+07:00"
+            "Version": "0.23.0"
         },
         {
-            "Name": "bottom",
-            "Info": "",
+            "Updated": "2023-04-20T08:36:58.7890471+07:00",
             "Source": ".SM",
-            "Version": "0.8.0",
-            "Updated": "2023-02-26T11:21:25.1455062+07:00"
+            "Info": "",
+            "Name": "beekeeper-studio-portable",
+            "Version": "3.9.9"
         },
         {
-            "Name": "cacert",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "2023-01-10",
-            "Updated": "2023-02-26T11:21:25.1611185+07:00"
-        },
-        {
-            "Name": "chezmoi",
-            "Info": "",
+            "Updated": "2023-04-27T00:33:35.5966447+07:00",
             "Source": "main",
-            "Version": "2.33.1",
-            "Updated": "2023-04-11T12:39:04.5942187+07:00"
+            "Info": "",
+            "Name": "bit",
+            "Version": "1.1.2"
         },
         {
+            "Updated": "2023-02-26T11:21:25.1455062+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "bottom",
+            "Version": "0.8.0"
+        },
+        {
+            "Updated": "2023-04-27T07:42:10.3241974+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "btop-lhm",
+            "Version": "1.0.4"
+        },
+        {
+            "Updated": "2023-04-22T23:11:52.8739081+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "chezmoi",
+            "Version": "2.33.3"
+        },
+        {
+            "Updated": "2023-04-03T21:06:13.9340093+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "cloak",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "0.2.0",
-            "Updated": "2023-04-03T21:06:13.9340093+07:00"
+            "Version": "0.2.0"
         },
         {
+            "Updated": "2023-04-25T08:51:32.3496041+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "copyq",
+            "Version": "7.0.0"
+        },
+        {
+            "Updated": "2023-04-30T00:05:46.0982846+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "curl",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "8.0.1_6",
-            "Updated": "2023-04-06T08:35:05.3391141+07:00"
+            "Version": "8.0.1_8"
         },
         {
+            "Updated": "2023-04-24T11:50:45.0763757+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "curlie",
+            "Version": "1.6.9"
+        },
+        {
+            "Updated": "2023-02-26T11:21:25.1767568+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "dark",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "3.11.2",
-            "Updated": "2023-02-26T11:21:25.1767568+07:00"
+            "Version": "3.11.2"
         },
         {
+            "Updated": "2023-04-24T01:03:27.0848251+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "delta",
+            "Version": "0.15.1"
+        },
+        {
+            "Updated": "2023-02-27T08:50:49.557675+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "deno",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "latest",
-            "Updated": "2023-02-27T08:50:49.557675+07:00"
+            "Version": "latest"
         },
         {
+            "Updated": "2023-04-18T09:28:18.5505128+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "dprint",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "0.35.4",
-            "Updated": "2023-04-11T08:20:39.6389112+07:00"
+            "Version": "0.36.0"
         },
         {
+            "Updated": "2023-04-25T08:25:48.9827365+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "elvish",
+            "Version": "0.19.2"
+        },
+        {
+            "Updated": "2023-02-26T11:21:25.1767568+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "fd",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "8.7.0",
-            "Updated": "2023-02-26T11:21:25.1767568+07:00"
+            "Version": "8.7.0"
         },
         {
+            "Updated": "2023-04-30T00:06:11.2319018+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "FerdiumNightly-Portable",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "6.2.7-nightly.4",
-            "Updated": "2023-04-08T13:40:52.4742549+07:00"
+            "Version": "6.2.7-nightly.9"
         },
         {
+            "Updated": "2023-04-30T00:06:23.8552371+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "ffmpeg-shared-nightly",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "110228",
-            "Updated": "2023-04-11T22:59:43.5581776+07:00"
+            "Version": "110417"
         },
         {
+            "Updated": "2023-04-30T09:04:17.4689134+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "firefox-nightly-portable",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "114.0a1.20230412092401",
-            "Updated": "2023-04-13T18:33:37.3858766+07:00"
+            "Version": "114.0a1.20230429092024"
         },
         {
+            "Updated": "2023-04-22T00:52:35.7941594+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "flow-launcher",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "1.14.0",
-            "Updated": "2023-03-04T22:54:22.5355237+07:00"
+            "Version": "1.14.1"
         },
         {
+            "Updated": "2023-02-26T11:21:25.2080035+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "fnm",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "1.33.1",
-            "Updated": "2023-02-26T11:21:25.2080035+07:00"
+            "Version": "1.33.1"
         },
         {
+            "Updated": "2023-04-29T08:30:51.3846401+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "fork",
+            "Version": "1.84.0"
+        },
+        {
+            "Updated": "2023-04-04T06:24:50.3133921+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "fzf",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "0.39.0",
-            "Updated": "2023-04-04T06:24:50.3133921+07:00"
+            "Version": "0.39.0"
         },
         {
+            "Updated": "2023-04-16T15:32:04.3849924+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "gallery-dlCLI-Portable",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "1.25.1",
-            "Updated": "2023-03-29T06:25:17.2810735+07:00"
+            "Version": "1.25.2"
         },
         {
+            "Updated": "2023-04-26T20:08:29.3708342+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "git",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "2.40.0.windows.1",
-            "Updated": "2023-03-15T06:33:21.1765572+07:00"
+            "Version": "2.40.1.windows.1"
         },
         {
+            "Updated": "2023-04-27T00:21:21.1136359+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "gitnuro",
+            "Version": "1.1.1"
+        },
+        {
+            "Updated": "2023-02-26T11:21:25.2236236+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "gitui",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "0.22.1",
-            "Updated": "2023-02-26T11:21:25.2236236+07:00"
+            "Version": "0.22.1"
         },
         {
+            "Updated": "2023-02-26T11:21:25.2236236+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "glow",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "1.5.0",
-            "Updated": "2023-02-26T11:21:25.2236236+07:00"
+            "Version": "1.5.0"
         },
         {
+            "Updated": "2023-04-06T08:37:43.0359227+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "go",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "1.20.3",
-            "Updated": "2023-04-06T08:37:43.0359227+07:00"
+            "Version": "1.20.3"
         },
         {
+            "Updated": "2023-04-23T23:14:34.6022293+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "helix",
+            "Version": "23.03"
+        },
+        {
+            "Updated": "2023-03-24T22:22:38.1420538+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "hexchat",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "2.16.1",
-            "Updated": "2023-03-24T22:22:38.1420538+07:00"
+            "Version": "2.16.1"
         },
         {
+            "Updated": "2023-04-20T12:23:45.0779652+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "houdoku",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "2.12.0",
-            "Updated": "2023-03-24T21:25:19.4539908+07:00"
+            "Version": "2.12.2"
         },
         {
+            "Updated": "2023-04-22T23:14:06.3087807+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "imagemagick",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "7.1.1-6",
-            "Updated": "2023-04-04T06:25:47.5171083+07:00"
+            "Version": "7.1.1-8"
         },
         {
+            "Updated": "2023-02-26T11:21:25.2392398+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "innounp",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "0.50",
-            "Updated": "2023-02-26T11:21:25.2392398+07:00"
+            "Version": "0.50"
         },
         {
+            "Updated": "2023-04-14T09:50:57.0877484+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "jdownloader",
+            "Version": "nightly-20230414"
+        },
+        {
+            "Updated": "2023-04-15T23:17:25.5041739+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "jellyfin",
+            "Version": "10.8.9"
+        },
+        {
+            "Updated": "2023-04-24T19:05:04.0754642+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "jellyfin-media-player",
+            "Version": "1.9.1"
+        },
+        {
+            "Updated": "2023-02-26T11:21:25.2548716+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "jq",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "1.6",
-            "Updated": "2023-02-26T11:21:25.2548716+07:00"
+            "Version": "1.6"
         },
         {
+            "Updated": "2023-04-17T08:49:57.0962764+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "kid3",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "3.9.3",
-            "Updated": "2023-02-26T13:40:09.7378521+07:00"
+            "Version": "3.9.3-1"
         },
         {
+            "Updated": "2023-04-22T01:33:39.3812734+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "komorebi",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "0.1.15",
-            "Updated": "2023-02-26T11:21:25.2548716+07:00"
+            "Version": "0.1.15"
         },
         {
+            "Updated": "2023-04-30T13:45:12.5174249+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "lapce",
+            "Version": "0.2.7"
+        },
+        {
+            "Updated": "2023-04-13T15:06:53.3880552+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "less",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "608",
-            "Updated": "2023-04-13T15:06:53.3880552+07:00"
+            "Version": "608"
         },
         {
+            "Updated": "2023-02-26T11:21:25.2705035+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "lessmsi",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "1.10.0",
-            "Updated": "2023-02-26T11:21:25.2705035+07:00"
+            "Version": "1.10.0"
         },
         {
+            "Updated": "2023-02-26T11:21:25.2861159+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "lsd",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "0.23.1",
-            "Updated": "2023-02-26T11:21:25.2861159+07:00"
+            "Version": "0.23.1"
         },
         {
+            "Updated": "2023-04-10T22:04:31.8369437+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "make",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "4.4.1",
-            "Updated": "2023-04-10T22:04:31.8369437+07:00"
+            "Version": "4.4.1"
         },
         {
+            "Updated": "2023-04-29T21:38:48.8578814+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "mercury",
+            "Version": "112.0.3"
+        },
+        {
+            "Updated": "2023-03-04T22:54:37.0068964+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "musicbee_fixed",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "3.5.8447",
-            "Updated": "2023-03-04T22:54:37.0068964+07:00"
+            "Version": "3.5.8447"
         },
         {
+            "Updated": "2023-03-31T08:49:59.6070718+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "neovim",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "nightly-20230331",
-            "Updated": "2023-03-31T08:49:59.6070718+07:00"
+            "Version": "nightly-20230331"
         },
         {
+            "Updated": "2023-03-13T06:39:06.7790748+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "nicotine-plus",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "3.2.9",
-            "Updated": "2023-03-13T06:39:06.7790748+07:00"
+            "Version": "3.2.9"
         },
         {
+            "Updated": "2023-04-15T23:18:53.2994422+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "nssm",
+            "Version": "2.24-103"
+        },
+        {
+            "Updated": "2023-04-26T08:46:36.9200242+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "nu",
+            "Version": "0.79.0"
+        },
+        {
+            "Updated": "2023-05-01T18:38:07.2024575+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "nvy",
+            "Version": "0.3.5"
+        },
+        {
+            "Updated": "2023-04-28T08:52:33.3376591+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "oh-my-posh",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "14.29.1",
-            "Updated": "2023-04-10T23:12:40.890895+07:00"
+            "Version": "15.4.0"
         },
         {
+            "Updated": "2023-04-22T00:52:47.8701328+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "pnpm",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "8.2.0",
-            "Updated": "2023-04-10T22:10:30.3268466+07:00"
+            "Version": "8.3.1"
         },
         {
+            "Updated": "2023-04-13T18:27:31.9688775+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "powertoys",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "0.69.1",
-            "Updated": "2023-04-13T18:27:31.9688775+07:00"
+            "Version": "0.69.1"
         },
         {
+            "Updated": "2023-04-24T01:02:19.4568411+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "procs",
+            "Version": "0.14.0"
+        },
+        {
+            "Updated": "2023-04-15T13:24:17.9720736+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "pwsh",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "7.3.3",
-            "Updated": "2023-02-26T11:21:25.3173757+07:00"
+            "Version": "7.3.4"
         },
         {
+            "Updated": "2023-04-06T08:39:00.460471+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "python",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "3.11.3",
-            "Updated": "2023-04-06T08:39:00.460471+07:00"
+            "Version": "3.11.3"
         },
         {
+            "Updated": "2023-02-26T11:21:25.3173757+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "python27",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "2.7.18",
-            "Updated": "2023-02-26T11:21:25.3173757+07:00"
+            "Version": "2.7.18"
         },
         {
+            "Updated": "2023-03-04T19:51:12.7166526+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "qBittorrent-Portable",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "4.5.2",
-            "Updated": "2023-03-04T19:51:12.7166526+07:00"
+            "Version": "4.5.2"
         },
         {
+            "Updated": "2023-02-26T11:21:25.3330034+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "ripgrep",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "13.0.0",
-            "Updated": "2023-02-26T11:21:25.3330034+07:00"
+            "Version": "13.0.0"
         },
         {
+            "Updated": "2023-02-27T09:54:20.132161+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "rustup",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "latest",
-            "Updated": "2023-02-27T09:54:20.132161+07:00"
+            "Version": "latest"
         },
         {
+            "Updated": "2023-02-28T18:01:33.6281171+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "ss",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "6.1",
-            "Updated": "2023-02-28T18:01:33.6281171+07:00"
+            "Version": "6.1"
         },
         {
+            "Updated": "2023-04-29T13:21:02.3629927+07:00",
+            "Source": "main",
+            "Info": "",
             "Name": "starship",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "1.14.2",
-            "Updated": "2023-04-13T08:17:30.3181256+07:00"
+            "Version": "1.14.2"
         },
         {
+            "Updated": "2023-04-24T18:42:08.7004314+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "sysinternals-ims",
+            "Version": "2023.April.12"
+        },
+        {
+            "Updated": "2023-05-02T00:29:42.610732+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "tealdeer",
+            "Version": "1.6.1"
+        },
+        {
+            "Updated": "2023-04-30T00:06:52.0578618+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "Teamviewer-Portable",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "15.40.8",
-            "Updated": "2023-03-24T21:31:48.6360575+07:00"
+            "Version": "15.41.8"
         },
         {
+            "Updated": "2023-04-04T11:47:16.9828317+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "Thorium-AVX2",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "111.0.5563.111",
-            "Updated": "2023-04-04T11:47:16.9828317+07:00"
+            "Version": "111.0.5563.111"
         },
         {
+            "Updated": "2023-04-06T08:39:08.4359199+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "tree-sitter",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "0.20.8",
-            "Updated": "2023-04-06T08:39:08.4359199+07:00"
+            "Version": "0.20.8"
         },
         {
+            "Updated": "2023-04-28T21:36:23.3567607+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "wezterm",
+            "Version": "20230408-112425-69ae8472"
+        },
+        {
+            "Updated": "2023-02-26T11:21:25.3642686+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "wget",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "1.21.3",
-            "Updated": "2023-02-26T11:21:25.3642686+07:00"
+            "Version": "1.21.3"
         },
         {
+            "Updated": "2023-04-22T01:39:09.7988532+07:00",
+            "Source": ".SM",
+            "Info": "",
+            "Name": "whkd",
+            "Version": "0.1.2"
+        },
+        {
+            "Updated": "2023-03-03T16:25:05.047372+07:00",
+            "Source": ".SM",
+            "Info": "",
             "Name": "wslcompact",
-            "Info": "",
-            "Source": ".SM",
-            "Version": "8.7",
-            "Updated": "2023-03-03T16:25:05.047372+07:00"
+            "Version": "8.7"
         },
         {
-            "Name": "yt-dlp",
+            "Updated": "2023-04-22T15:18:23.4572136+07:00",
+            "Source": "main",
             "Info": "",
+            "Name": "xh",
+            "Version": "0.18.0"
+        },
+        {
+            "Updated": "2023-04-30T09:04:24.1722331+07:00",
             "Source": ".SM",
-            "Version": "2023.04.13.071052",
-            "Updated": "2023-04-13T18:27:37.4491805+07:00"
+            "Info": "",
+            "Name": "yt-dlp",
+            "Version": "2023.04.29.181950"
+        },
+        {
+            "Updated": "2023-05-01T11:22:58.754786+07:00",
+            "Source": "main",
+            "Info": "",
+            "Name": "zoxide",
+            "Version": "0.9.0"
         }
     ],
     "buckets": [
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
-            "Updated": "2023-04-13T15:27:06+07:00",
-            "Manifests": 1188
+            "Updated": "2023-05-02T00:18:13+07:00",
+            "Manifests": 1197
         },
         {
             "Name": ".SM",
             "Source": "https://github.com/okibcn/ScoopMaster",
-            "Updated": "2023-04-13T17:56:34+07:00",
-            "Manifests": 17749
+            "Updated": "2023-05-01T23:58:36+07:00",
+            "Manifests": 18866
         }
     ]
 }
