@@ -11,6 +11,12 @@ Set-Alias ll ls
 Set-Alias vim nvim
 Set-Alias p pnpm
 Set-Alias abm pnpm
+function sci {
+    param(
+        [string]$PackageName
+    )
+    scoop install $PackageName
+}
 function d () {
   pnpm dev
 }

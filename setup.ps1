@@ -21,3 +21,4 @@ Create-Symlink -Source $PSScriptRoot\git\.gitconfig -Target $HOME\.gitconfig
 Create-Symlink -Source $PSScriptRoot\powershell\main.ps1 -Target $PROFILE
 Create-Symlink -Source $PSScriptRoot\nvim -Target $env:LOCALAPPDATA\nvim
 Create-Symlink -Source $PSScriptRoot\scoop -Target $HOME\.config\scoop
+Create-Symlink -Source $PSScriptRoot\komorebi\whkdrc -Target $HOME\.config\whkdrc
