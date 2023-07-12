@@ -18,6 +18,7 @@ Remove-Item $PSScriptRoot\program_list.json
 Install-Module posh-git -Scope CurrentUser
 Install-Module Terminal-Icons -Scope CurrentUser
 Create-Symlink -Source $PSScriptRoot\git\.gitconfig -Target $HOME\.gitconfig
+Create-Symlink -Source $PSScriptRoot\git\.gitconfig-work -Target $HOME\.gitconfig-work
 Create-Symlink -Source $PSScriptRoot\powershell\main.ps1 -Target $PROFILE
 Create-Symlink -Source $PSScriptRoot\nvim -Target $env:LOCALAPPDATA\nvim
 Create-Symlink -Source $PSScriptRoot\scoop -Target $HOME\.config\scoop

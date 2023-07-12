@@ -6,9 +6,66 @@
 [user]
 	name = Nguyễn Trọng Sang
 	email = 33416398+ErogeMaster225@users.noreply.github.com
+[includeIf "gitdir:~/workspace/"]
+    path = .gitconfig-work
 [init]
-	defaultBranch = main
+	  defaultBranch = main
 [credential "helperselector"]
-	selected = manager-core
+	  selected = manager-core
 [credential]
-	helper = manager
+	  helper = manager
+[include]
+    path = ~/WinDotfiles/themes.gitconfig
+[core]
+    pager = delta
+    editor = nvim 
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    dark = true
+    line-numbers = true
+    side-by-side = true
+    keep-plus-minus-markers = false
+    syntax-theme = Nord
+    file-style = "#434C5E" bold
+    file-decoration-style = "#434C5E" ul
+    file-added-label = [+]
+    file-copied-label = [==]
+    file-modified-label = [*]
+    file-removed-label = [-]
+    file-renamed-label = [->]
+    hunk-header-style = omit
+    line-numbers-left-format = " {nm:>3} │"
+    line-numbers-left-style = "#BF616A"
+    line-numbers-right-format = " {np:>3} │"
+    line-numbers-right-style = "#A3BE8C"
+    line-numbers-minus-style = red italic black
+    line-numbers-plus-style = green italic black
+    line-numbers-zero-style = "#434C5E" italic
+    minus-style = bold red
+    minus-emph-style = bold "#202020" "#FF5555"
+    minus-non-emph-style = bold
+	  plus-style = syntax "#2E3440"
+    plus-emph-style = bold "#202020" "#50FA7B"
+    plus-non-emph-style = bold
+    zero-style = syntax
+    blame-code-style = syntax
+    blame-format = "{author:<18} ({commit:>9}) {timestamp:^16}"
+    blame-palette = "#2E3440" "#3B4252" "#434C5E" "#4C566A"
+    merge-conflict-begin-symbol = ~
+    merge-conflict-end-symbol = ~
+    merge-conflict-ours-diff-header-style = "#F1FA8C" bold
+    merge-conflict-ours-diff-header-decoration-style = "#434C5E" box
+    merge-conflict-theirs-diff-header-style = "#F1FA8C" bold
+    merge-conflict-theirs-diff-header-decoration-style = "#434C5E" box
+	  navigate = true    # use n and N to move between diff sections
+    hyperlinks = true
+    hyperlinks-file-link-format = "file-line://{path}:{line}"
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
