@@ -13,7 +13,7 @@
 [credential "helperselector"]
 	  selected = manager-core
 [credential]
-	  helper = manager
+	helper = manager
 [include]
     path = ~/WinDotfiles/themes.gitconfig
 [core]
