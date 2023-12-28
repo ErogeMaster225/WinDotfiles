@@ -13,22 +13,23 @@ local utils = require 'mp.utils'
 local msg = require 'mp.msg'
 local assdraw = require 'mp.assdraw'
 local opt = require('mp.options')
+local script_name = mp.get_script_name()
 
 local opts = {
     --key bindings
-    up_binding = 'UP WHEEL_UP',
-    down_binding = 'DOWN WHEEL_DOWN',
-    select_binding = 'ENTER MBTN_LEFT',
-    close_menu_binding = 'ESC MBTN_RIGHT',
+    up_binding               = 'UP WHEEL_UP',
+    down_binding             = 'DOWN WHEEL_DOWN',
+    select_binding           = 'ENTER MBTN_LEFT',
+    close_menu_binding       = 'ESC MBTN_RIGHT',
 
     --youtube-dl version(could be youtube-dl or yt-dlp, or something else)
-    ytdl_ver = 'yt-dlp',
+    ytdl_ver                 = 'yt-dlp',
 
     --formatting / cursors
-    selected_and_active     = '▶  - ',
-    selected_and_inactive   = '●  - ',
-    unselected_and_active   = '▷ - ',
-    unselected_and_inactive = '○ - ',
+    selected_and_active      = '▶  - ',
+    selected_and_inactive    = '●  - ',
+    unselected_and_active    = '▷ - ',
+    unselected_and_inactive  = '○ - ',
 
     --font size scales by window, if false requires larger font and padding sizes
     scale_playlist_by_window = true,
@@ -40,28 +41,28 @@ local opts = {
     --these styles will be used for the whole playlist. More specific styling will need to be hacked in
     --
     --(a monospaced font is recommended but not required)
-    style_ass_tags = '{\\fnmonospace\\fs25\\bord1}',
+    style_ass_tags           = '{\\fnmonospace\\fs25\\bord1}',
 
     -- Shift drawing coordinates. Required for mpv.net compatiblity
-    shift_x = 0,
-    shift_y = 0,
+    shift_x                  = 0,
+    shift_y                  = 0,
 
     --paddings from window edge
-    text_padding_x = 5,
-    text_padding_y = 10,
+    text_padding_x           = 5,
+    text_padding_y           = 10,
 
     --Screen dim when menu is open
-    curtain_opacity = 0.7,
+    curtain_opacity          = 0.7,
 
     --how many seconds until the quality menu times out
     --setting this to 0 deactivates the timeout
-    menu_timeout = 6,
+    menu_timeout             = 6,
 
     --use youtube-dl to fetch a list of available formats (overrides quality_strings)
-    fetch_formats = true,
+    fetch_formats            = true,
 
     --list of ytdl-format strings to choose from
-    quality_strings_video = [[
+    quality_strings_video    = [[
     [
     {"4320p" : "bestvideo[height<=?4320p]"},
     {"2160p" : "bestvideo[height<=?2160]"},
@@ -74,27 +75,27 @@ local opts = {
     {"144p" : "bestvideo[height<=?144]"}
     ]
     ]],
-    quality_strings_audio = [[
+    quality_strings_audio    = [[
     [
     {"default" : "bestaudio/best"}
     ]
     ]],
 
     --automatically fetch available formats when opening an url
-    fetch_on_start = true,
+    fetch_on_start           = true,
 
     --show the video format menu after opening an url
-    start_with_menu = false,
+    start_with_menu          = false,
 
     --include unknown formats in the list
     --Unfortunately choosing which formats are video or audio is not always perfect.
     --Set to true to make sure you don't miss any formats, but then the list
     --might also include formats that aren't actually video or audio.
     --Formats that are known to not be video or audio are still filtered out.
-    include_unknown = false,
+    include_unknown          = false,
 
     --hide columns that are identical for all formats
-    hide_identical_columns = true,
+    hide_identical_columns   = true,
 
     --which columns are shown in which order
     --comma separated list, prefix column with "-" to align left
@@ -119,16 +120,16 @@ local opts = {
     --
     --Not all videos have all columns available.
     --Be careful, misspelled columns simply won't be displayed, there is no error.
-    columns_video = '-resolution,frame_rate,dynamic_range|language,bitrate_total,size,-codec_video,-codec_audio',
-    columns_audio = 'audio_sample_rate,bitrate_total|size,language,-codec_audio',
+    columns_video            = '-resolution,frame_rate,dynamic_range|language,bitrate_total,size,-codec_video,-codec_audio',
+    columns_audio            = 'audio_sample_rate,bitrate_total|size,language,-codec_audio',
 
     --columns used for sorting, see "columns_video" for available columns
     --comma separated list, prefix column with "-" to reverse sorting order
     --Leaving this empty keeps the order from yt-dlp/youtube-dl.
     --Be careful, misspelled columns won't result in an error,
     --but they might influence the result.
-    sort_video = 'height,fps,tbr,size,format_id',
-    sort_audio = 'asr,tbr,size,format_id',
+    sort_video               = 'height,fps,tbr,size,format_id',
+    sort_audio               = 'asr,tbr,size,format_id',
 }
 opt.read_options(opts, 'quality-menu')
 
@@ -220,8 +221,10 @@ do
             end
         end
         return {
-            all = columns, all_align_left = columns_align_left,
-            title = title, title_align_left = title_align_left,
+            all = columns,
+            all_align_left = columns_align_left,
+            title = title,
+            title_align_left = title_align_left,
             hint = hint
         }
     end
@@ -236,11 +239,10 @@ end
 
 -- special thanks to reload.lua (https://github.com/4e6/mpv-reload/)
 local function reload_resume()
-    local playlist_pos = mp.get_property_number('playlist-pos')
     local reload_duration = mp.get_property_native('duration')
     local time_pos = mp.get_property('time-pos')
 
-    mp.set_property_number('playlist-pos', playlist_pos)
+    mp.command('playlist-play-index current')
 
     -- Tries to determine live stream vs. pre-recorded VOD. VOD has non-zero
     -- duration property. When reloading VOD, to keep the current time position
@@ -249,7 +251,7 @@ local function reload_resume()
     -- That's the reason we don't pass the offset when reloading streams.
     if reload_duration and reload_duration > 0 then
         local function seeker()
-            mp.commandv('seek', time_pos, 'absolute')
+            mp.commandv('seek', time_pos, 'absolute+exact')
             mp.unregister_event(seeker)
         end
 
@@ -426,10 +428,14 @@ local function process_json(json)
             counter = counter + 1
         end
 
-        if counter >= 3 then return string.format('%.1fGiB', size)
-        elseif counter >= 2 then return string.format('%.1fMiB', size)
-        elseif counter >= 1 then return string.format('%.1fKiB', size)
-        else return string.format('%.1fB  ', size)
+        if counter >= 3 then
+            return string.format('%.1fGiB', size)
+        elseif counter >= 2 then
+            return string.format('%.1fMiB', size)
+        elseif counter >= 1 then
+            return string.format('%.1fKiB', size)
+        else
+            return string.format('%.1fB  ', size)
         end
     end
 
@@ -446,9 +452,12 @@ local function process_json(json)
             counter = counter + 1
         end
 
-        if counter >= 2 then return string.format('%.1fGbps', bitrate)
-        elseif counter >= 1 then return string.format('%.1fMbps', bitrate)
-        else return string.format('%.1fKbps', bitrate)
+        if counter >= 2 then
+            return string.format('%.1fGbps', bitrate)
+        elseif counter >= 1 then
+            return string.format('%.1fMbps', bitrate)
+        else
+            return string.format('%.1fKbps', bitrate)
         end
     end
 
@@ -710,11 +719,17 @@ local function text_menu_open(formats, active_format, menu_type)
     ---@param i integer
     ---@return string
     local function choose_prefix(i)
-        if i == selected and i == active then return opts.selected_and_active
-        elseif i == selected then return opts.selected_and_inactive end
+        if i == selected and i == active then
+            return opts.selected_and_active
+        elseif i == selected then
+            return opts.selected_and_inactive
+        end
 
-        if i ~= selected and i == active then return opts.unselected_and_active
-        elseif i ~= selected then return opts.unselected_and_inactive end
+        if i ~= selected and i == active then
+            return opts.unselected_and_active
+        elseif i ~= selected then
+            return opts.unselected_and_inactive
+        end
         return '> ' --shouldn't get here.
     end
 
@@ -748,7 +763,7 @@ local function text_menu_open(formats, active_format, menu_type)
         local clip_top = math.floor(margin_top * height + 0.5)
         local clip_bottom = math.floor((1 - margin_bottom) * height + 0.5)
         local clipping_coordinates = '0,' .. clip_top .. ',' .. width .. ',' .. clip_bottom
-        ass:append(opts.style_ass_tags .. '{\\q2\\clip(' .. clipping_coordinates .. ')}')
+        ass:append('{\\rDefault\\q2\\clip(' .. clipping_coordinates .. ')}' .. opts.style_ass_tags)
 
         if #formats > 0 then
             for i, format in ipairs(formats) do
@@ -775,35 +790,56 @@ local function text_menu_open(formats, active_format, menu_type)
         draw_menu()
     end
 
-    local function update_margins()
-        local shared_props = mp.get_property_native('shared-script-properties')
-        local val = shared_props['osc-margins']
-        if val then
-            -- formatted as '%f,%f,%f,%f' with left, right, top, bottom, each
-            -- value being the border size as ratio of the window size (0.0-1.0)
-            local vals = {}
-            for v in string.gmatch(val, '[^,]+') do
-                vals[#vals + 1] = tonumber(v)
+    local update_margins;
+    if utils.shared_script_property_set then
+        update_margins = function()
+            local shared_props = mp.get_property_native('shared-script-properties')
+            local val = shared_props['osc-margins']
+            if val then
+                -- formatted as '%f,%f,%f,%f' with left, right, top, bottom, each
+                -- value being the border size as ratio of the window size (0.0-1.0)
+                local vals = {}
+                for v in string.gmatch(val, '[^,]+') do
+                    vals[#vals + 1] = tonumber(v)
+                end
+                margin_top = vals[3]    -- top
+                margin_bottom = vals[4] -- bottom
+            else
+                margin_top = 0
+                margin_bottom = 0
             end
-            margin_top = vals[3] -- top
-            margin_bottom = vals[4] -- bottom
-        else
-            margin_top = 0
-            margin_bottom = 0
+            draw_menu()
         end
-        draw_menu()
+        mp.observe_property('shared-script-properties', 'native', update_margins)
+    else
+        update_margins = function(_, val)
+            if not val then
+                val = mp.get_property_native('user-data/osc/margins')
+            end
+            if val then
+                margin_top = val.t
+                margin_bottom = val.b
+            else
+                margin_top = 0
+                margin_bottom = 0
+            end
+            draw_menu()
+        end
+        mp.observe_property('user-data/osc/margins', 'native', update_margins)
     end
 
     update_dimensions()
     update_margins()
     mp.observe_property('osd-dimensions', 'native', update_dimensions)
-    mp.observe_property('shared-script-properties', 'native', update_margins)
 
     ---@param amount integer
     local function selected_move(amount)
         selected = selected + amount
-        if selected < 1 then selected = num_options
-        elseif selected > num_options then selected = 1 end
+        if selected < 1 then
+            selected = num_options
+        elseif selected > num_options then
+            selected = 1
+        end
         if osd_timer then
             osd_timer:kill()
             osd_timer:resume()
@@ -860,15 +896,18 @@ local function text_menu_open(formats, active_format, menu_type)
         osd_timer:resume()
     end
 
-    bind_keys(opts.up_binding, 'move_up', function() selected_move( -1) end, { repeatable = true })
+    bind_keys(opts.up_binding, 'move_up', function() selected_move(-1) end, { repeatable = true })
     bind_keys(opts.down_binding, 'move_down', function() selected_move(1) end, { repeatable = true })
     bind_keys(opts.close_menu_binding, 'close', menu_close)
     bind_keys(opts.select_binding, 'select', function()
         if selected == num_options then
             mp.unobserve_property(update_dimensions)
             mp.unobserve_property(update_margins)
-            if menu_type.is_video then audio_formats_toggle()
-            else video_formats_toggle() end
+            if menu_type.is_video then
+                audio_formats_toggle()
+            else
+                video_formats_toggle()
+            end
             return
         end
         menu_close()
@@ -894,15 +933,16 @@ end
 
 ---@param menu table
 ---@param menu_type UIState
----@return string
 local function uosc_show_menu(menu, menu_type)
     local json = utils.format_json(menu)
     -- always using update wouldn't work, because it doesn't support the on_close command
     -- therefore opening a different kind requires `open-menu`
     -- while updating the same kind requires `update-menu`
-    if open_menu_state == menu_type then mp.commandv('script-message-to', 'uosc', 'update-menu', json)
-    else mp.commandv('script-message-to', 'uosc', 'open-menu', json) end
-    return json
+    if open_menu_state == menu_type then
+        mp.commandv('script-message-to', 'uosc', 'update-menu', json)
+    else
+        mp.commandv('script-message-to', 'uosc', 'open-menu', json)
+    end
 end
 
 ---@param formats Format[]
@@ -916,7 +956,7 @@ local function uosc_menu_open(formats, active_format, menu_type)
         keep_open = true,
         on_close = {
             'script-message-to',
-            'quality_menu',
+            script_name,
             'uosc-menu-closed',
             menu_type.name,
         }
@@ -929,7 +969,7 @@ local function uosc_menu_open(formats, active_format, menu_type)
         hint = 'open menu',
         value = {
             'script-message-to',
-            'quality_menu',
+            script_name,
             menu_type.to_other_type.type .. '_formats_toggle',
         },
     }
@@ -941,7 +981,7 @@ local function uosc_menu_open(formats, active_format, menu_type)
         active = active_format == '',
         value = {
             'script-message-to',
-            'quality_menu',
+            script_name,
             menu_type.type .. '-format-set',
             current_url,
             '',
@@ -955,7 +995,7 @@ local function uosc_menu_open(formats, active_format, menu_type)
             active = format.id == active_format,
             value = {
                 'script-message-to',
-                'quality_menu',
+                script_name,
                 menu_type.type .. '-format-set',
                 current_url,
                 format.id,
@@ -963,9 +1003,9 @@ local function uosc_menu_open(formats, active_format, menu_type)
         }
     end
 
-    local json = uosc_show_menu(menu, menu_type)
+    uosc_show_menu(menu, menu_type)
     destructor = function()
-        mp.commandv('script-message-to', 'uosc', 'open-menu', json)
+        mp.commandv('script-message-to', 'uosc', 'close-menu', menu.type)
     end
 end
 
@@ -1090,19 +1130,19 @@ local function loading_message(menu_type)
         if open_menu_state and open_menu_state == menu_type then return end
         local menu = {
             title = menu_type.type_capitalized .. ' Formats',
-            items = { { icon = 'spinner', value = 'ignore' } },
+            items = { { icon = 'spinner', selectable = false, value = 'ignore' } },
             type = 'quality-menu-' .. menu_type.name,
             keep_open = true,
             on_close = {
                 'script-message-to',
-                'quality_menu',
+                script_name,
                 'uosc-menu-closed',
                 menu_type.name
             }
         }
-        local json = uosc_show_menu(menu, menu_type)
+        uosc_show_menu(menu, menu_type)
         destructor = function()
-            mp.commandv('script-message-to', 'uosc', 'open-menu', json)
+            mp.commandv('script-message-to', 'uosc', 'close-menu', menu.type)
         end
     else
         osd_message('fetching available ' .. menu_type.type .. ' formats...', 60)
@@ -1132,14 +1172,20 @@ function menu_open(menu_type)
     end
     local formats = menu_type.is_video and data.video_formats or data.audio_formats
     local active_format
-    if menu_type.is_video then active_format = data.video_active_id
-    else active_format = data.audio_active_id end
+    if menu_type.is_video then
+        active_format = data.video_active_id
+    else
+        active_format = data.audio_active_id
+    end
 
     msg.verbose('current ytdl-format: ' .. mp.get_property('ytdl-format', ''))
 
     ensure_menu_data_filled(formats, menu_type)
-    if uosc_available then uosc_menu_open(formats, active_format, menu_type)
-    else text_menu_open(formats, active_format, menu_type) end
+    if uosc_available then
+        uosc_menu_open(formats, active_format, menu_type)
+    else
+        text_menu_open(formats, active_format, menu_type)
+    end
     open_menu_state = menu_type
 end
 
@@ -1174,6 +1220,7 @@ local function toggle_menu(menu_type)
 end
 
 function video_formats_toggle() toggle_menu(states.video_menu) end
+
 function audio_formats_toggle() toggle_menu(states.audio_menu) end
 
 -- keybind to launch menu
@@ -1259,7 +1306,7 @@ mp.register_script_message('uosc-version', function(version)
         'uosc',
         'overwrite-binding',
         'stream-quality',
-        'script-binding quality_menu/video_formats_toggle'
+        'script-binding ' .. script_name .. '/video_formats_toggle'
     )
     ---@param name string
     mp.register_script_message('uosc-menu-closed', function(name)

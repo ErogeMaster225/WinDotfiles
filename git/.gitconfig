@@ -11,14 +11,14 @@
 [init]
 	  defaultBranch = main
 [credential "helperselector"]
-	  selected = manager-core
+	selected = manager
 [credential]
 	helper = manager
 [include]
     path = ~/WinDotfiles/themes.gitconfig
 [core]
     pager = delta
-    editor = nvim 
+    editor = nvim
 [interactive]
     diffFilter = delta --color-only
 
@@ -68,4 +68,5 @@
 
 [diff]
     colorMoved = default
-
+[safe]
+	directory = *
